@@ -17,7 +17,7 @@ struct RootView: View {
 		.sheet(item: $activeOption) { option in
 			switch option {
 			case .defaultSwiftUINavigation:
-				Text("asdasda")
+				ViewWithNavA()
 
 			default:
 				EmptyView()
