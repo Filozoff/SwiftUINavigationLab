@@ -1,7 +1,7 @@
 import SwiftUI
 import ViewAdditions
 
-public struct ViewWithNavD: View {
+public struct LazyViewWithNavD: View {
 
 	@State private var isActive = false
 	@StateObject private var viewModel: ViewModelD
@@ -17,12 +17,12 @@ public struct ViewWithNavD: View {
 		}
 
 		NavigationLink("Go to view E", isActive: $isActive) {
-			ViewWithNavE(viewModel: .init())
+			LazyView(LazyViewWithNavE(viewModel: .init()))
 		}
 	}
 }
 
-struct ViewWithNavD_Previews: PreviewProvider {
+struct LazyViewWithNavD_Previews: PreviewProvider {
 	static var previews: some View {
 		ViewWithNavD(viewModel: .init())
 	}

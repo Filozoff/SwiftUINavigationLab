@@ -3,7 +3,8 @@ import SwiftUI
 struct RootView: View {
 
 	private let options: [NavigationOption] = [
-		.defaultSwiftUINavigation
+		.defaultSwiftUINavigation,
+		.defaultSwiftUINavigationWithLazyViews
 	]
 
 	@State private var activeOption: NavigationOption?
@@ -18,6 +19,8 @@ struct RootView: View {
 			switch option {
 			case .defaultSwiftUINavigation:
 				ViewWithNavA()
+			case .defaultSwiftUINavigationWithLazyViews:
+				LazyViewWithNavA()
 
 			default:
 				EmptyView()

@@ -1,8 +1,7 @@
-import Combine
 import SwiftUI
 import ViewAdditions
 
-public struct ViewWithNavC: View {
+public struct LazyViewWithNavC: View {
 
 	@State private var isActive = false
 
@@ -22,12 +21,12 @@ public struct ViewWithNavC: View {
 		}
 
 		NavigationLink("Go to view D", isActive: $isActive) {
-			ViewWithNavD(viewModel: .init())
+			LazyView(LazyViewWithNavD(viewModel: .init()))
 		}
 	}
 }
 
-struct ViewWithNavC_Previews: PreviewProvider {
+struct LazyViewWithNavC_Previews: PreviewProvider {
 	static var previews: some View {
 		ViewWithNavC(viewModel: .init())
 	}

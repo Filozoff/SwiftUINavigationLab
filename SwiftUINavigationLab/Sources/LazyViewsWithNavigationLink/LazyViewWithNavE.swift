@@ -1,7 +1,7 @@
 import SwiftUI
 import ViewAdditions
 
-public struct ViewWithNavE: View {
+public struct LazyViewWithNavE: View {
 
 	@StateObject private var viewModel: ViewModelE
 
@@ -21,7 +21,7 @@ public struct ViewWithNavE: View {
 	}
 }
 
-struct ViewWithNavE_Previews: PreviewProvider {
+struct LazyViewWithNavE_Previews: PreviewProvider {
 
 	static var previews: some View {
 		ViewWithNavE(viewModel: .init())

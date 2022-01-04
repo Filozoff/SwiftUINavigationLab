@@ -16,4 +16,5 @@ extension RootView.NavigationOption {
 extension RootView.NavigationOption {
 
 	static let defaultSwiftUINavigation = Self(name: "Default SwiftUI navigation")
+	static let defaultSwiftUINavigationWithLazyViews = Self(name: "Default SwiftUI navigation with Lazy Views")
 }
