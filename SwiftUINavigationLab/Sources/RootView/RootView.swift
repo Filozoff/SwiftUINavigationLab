@@ -4,7 +4,8 @@ struct RootView: View {
 
 	private let options: [NavigationOption] = [
 		.defaultSwiftUINavigation,
-		.defaultSwiftUINavigationWithLazyViews
+		.defaultSwiftUINavigationWithLazyViews,
+		.defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel
 	]
 
 	@State private var activeOption: NavigationOption?
@@ -19,8 +20,12 @@ struct RootView: View {
 			switch option {
 			case .defaultSwiftUINavigation:
 				ViewWithNavA()
+
 			case .defaultSwiftUINavigationWithLazyViews:
 				LazyViewWithNavA()
+
+			case .defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel:
+				LazyViewWithNavVMA()
 
 			default:
 				EmptyView()
