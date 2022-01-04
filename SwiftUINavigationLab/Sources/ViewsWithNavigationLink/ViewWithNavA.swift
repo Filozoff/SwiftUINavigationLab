@@ -8,6 +8,7 @@ public struct ViewWithNavA: View {
 	public init() { }
 
 	public var body: some View {
+		let _ = Self._printChanges()
 		NavigationView {
 			VStack {
 				NavigationLink("Go to view B", isActive: $isActive) {

@@ -10,6 +10,7 @@ public struct LazyViewWithNavE: View {
 	}
 
 	public var body: some View {
+		let _ = Self._printChanges()
 		VStack {
 			Text("Counter: \(viewModel.counter)")
 			Button("Bump") {

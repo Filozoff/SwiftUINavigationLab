@@ -12,10 +12,7 @@ public struct ViewWithNavB: View {
 	}
 
 	public var body: some View {
-		if #available(iOS 15.0, *) {
-			let _ = Self._printChanges()
-		}
-
+		let _ = Self._printChanges()
 		Text("Counter: \(viewModel.counter)")
 		Button("Bump") {
 			viewModel.bump()
