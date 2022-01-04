@@ -1,4 +1,5 @@
 import SwiftUI
+import ViewAdditions
 
 public struct ViewC: View {
 

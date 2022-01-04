@@ -1,4 +1,5 @@
 import SwiftUI
+import ViewAdditions
 import Views
 
 public struct ExampleCoordinator: View {

@@ -10,17 +10,20 @@ let package = Package(
         .library(
             name: "Coordinator",
             targets: ["Coordinator"]
-		),
+		)
     ],
-    dependencies: [],
+    dependencies: [
+		.package(name: "ViewAdditions", path: "../ViewAdditions"),
+		.package(name: "Views", path: "../Views")
+	],
     targets: [
         .target(
             name: "Coordinator",
-            dependencies: []
+            dependencies: ["ViewAdditions", "Views"]
 		),
         .testTarget(
             name: "CoordinatorTests",
             dependencies: ["Coordinator"]
-		),
+		)
     ]
 )

@@ -1,5 +1,6 @@
 import Combine
 import SwiftUI
+import ViewAdditions
 
 public struct ViewB: View {
 
