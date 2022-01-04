@@ -23,7 +23,6 @@ public struct LazyViewWithNavE: View {
 }
 
 struct LazyViewWithNavE_Previews: PreviewProvider {
-
 	static var previews: some View {
 		LazyViewWithNavE(viewModel: .init())
 	}

@@ -23,7 +23,6 @@ public struct ViewWithNavE: View {
 }
 
 struct ViewWithNavE_Previews: PreviewProvider {
-
 	static var previews: some View {
 		ViewWithNavE(viewModel: .init())
 	}
