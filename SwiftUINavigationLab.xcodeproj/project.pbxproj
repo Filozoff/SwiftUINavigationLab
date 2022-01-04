@@ -31,6 +31,8 @@
 		2FC6294B2784DD2F00B1E732 /* LazyViewWithNavVMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC629462784DD2F00B1E732 /* LazyViewWithNavVMD.swift */; };
 		2FC6294C2784DD2F00B1E732 /* LazyViewWithNavVMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC629472784DD2F00B1E732 /* LazyViewWithNavVMC.swift */; };
 		2FC6294F2784EFF700B1E732 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC6294E2784EFF700B1E732 /* Coordinator */; };
+		2FC629522784F82E00B1E732 /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC629512784F82E00B1E732 /* FlowStacks */; };
+		2FC629552784F87100B1E732 /* ExampleFlowStackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC629542784F87100B1E732 /* ExampleFlowStackCoordinator.swift */; };
 		2FED34D527823C5E0020F8F7 /* LazyViewWithNavD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED34D027823C5E0020F8F7 /* LazyViewWithNavD.swift */; };
 		2FED34D627823C5E0020F8F7 /* LazyViewWithNavB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED34D127823C5E0020F8F7 /* LazyViewWithNavB.swift */; };
 		2FED34D727823C5E0020F8F7 /* LazyViewWithNavE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED34D227823C5E0020F8F7 /* LazyViewWithNavE.swift */; };
@@ -86,6 +88,7 @@
 		2FC629452784DD2F00B1E732 /* LazyViewWithNavVMA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavVMA.swift; sourceTree = "<group>"; };
 		2FC629462784DD2F00B1E732 /* LazyViewWithNavVMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavVMD.swift; sourceTree = "<group>"; };
 		2FC629472784DD2F00B1E732 /* LazyViewWithNavVMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavVMC.swift; sourceTree = "<group>"; };
+		2FC629542784F87100B1E732 /* ExampleFlowStackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFlowStackCoordinator.swift; sourceTree = "<group>"; };
 		2FED34D027823C5E0020F8F7 /* LazyViewWithNavD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavD.swift; sourceTree = "<group>"; };
 		2FED34D127823C5E0020F8F7 /* LazyViewWithNavB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavB.swift; sourceTree = "<group>"; };
 		2FED34D227823C5E0020F8F7 /* LazyViewWithNavE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyViewWithNavE.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			files = (
 				2F5AAF92277F6547002C6922 /* ViewAdditions in Frameworks */,
 				2FC6294F2784EFF700B1E732 /* Coordinator in Frameworks */,
+				2FC629522784F82E00B1E732 /* FlowStacks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +227,7 @@
 				2FC629392784D36200B1E732 /* ViewModel */,
 				2F871C44277F3B18002CB6F0 /* Main */,
 				2F5AAF77277F627B002C6922 /* RootView */,
+				2FC629532784F84A00B1E732 /* FlowStack */,
 				2FED34CF27823C5E0020F8F7 /* LazyViewsWithNavigationLink */,
 				2FC629422784DACA00B1E732 /* LazyViewsWithNavigationLinkAndNotInjectedViewModel */,
 				2F5AAF93277F66C3002C6922 /* ViewsWithNavigationLink */,
@@ -269,6 +274,14 @@
 			path = LazyViewsWithNavigationLinkAndNotInjectedViewModel;
 			sourceTree = "<group>";
 		};
+		2FC629532784F84A00B1E732 /* FlowStack */ = {
+			isa = PBXGroup;
+			children = (
+				2FC629542784F87100B1E732 /* ExampleFlowStackCoordinator.swift */,
+			);
+			path = FlowStack;
+			sourceTree = "<group>";
+		};
 		2FED34CF27823C5E0020F8F7 /* LazyViewsWithNavigationLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +313,7 @@
 			packageProductDependencies = (
 				2F5AAF91277F6547002C6922 /* ViewAdditions */,
 				2FC6294E2784EFF700B1E732 /* Coordinator */,
+				2FC629512784F82E00B1E732 /* FlowStacks */,
 			);
 			productName = SwiftUINavigationLab;
 			productReference = 2F871C15277F3A82002CB6F0 /* SwiftUINavigationLab.app */;
@@ -373,6 +387,9 @@
 				Base,
 			);
 			mainGroup = 2F871C0C277F3A82002CB6F0;
+			packageReferences = (
+				2FC629502784F82E00B1E732 /* XCRemoteSwiftPackageReference "FlowStacks" */,
+			);
 			productRefGroup = 2F871C16277F3A82002CB6F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -430,6 +447,7 @@
 				2FC629482784DD2F00B1E732 /* LazyViewWithNavVMB.swift in Sources */,
 				2F5AAF9D277F66C3002C6922 /* ViewWithNavC.swift in Sources */,
 				2FC6293F2784D5F900B1E732 /* ViewModelD.swift in Sources */,
+				2FC629552784F87100B1E732 /* ExampleFlowStackCoordinator.swift in Sources */,
 				2FC629492784DD2F00B1E732 /* LazyViewWithNavVME.swift in Sources */,
 				2F5AAF9A277F66C3002C6922 /* ViewWithNavB.swift in Sources */,
 				2FC6294A2784DD2F00B1E732 /* LazyViewWithNavVMA.swift in Sources */,
@@ -764,6 +782,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2FC629502784F82E00B1E732 /* XCRemoteSwiftPackageReference "FlowStacks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:johnpatrickmorgan/FlowStacks.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		2F5AAF91277F6547002C6922 /* ViewAdditions */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -772,6 +801,11 @@
 		2FC6294E2784EFF700B1E732 /* Coordinator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Coordinator;
+		};
+		2FC629512784F82E00B1E732 /* FlowStacks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FC629502784F82E00B1E732 /* XCRemoteSwiftPackageReference "FlowStacks" */;
+			productName = FlowStacks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

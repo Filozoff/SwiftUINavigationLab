@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FlowStacks",
+        "repositoryURL": "git@github.com:johnpatrickmorgan/FlowStacks.git",
+        "state": {
+          "branch": null,
+          "revision": "bcf6ffa1bb42830a69e9603300ec0ca00cacaf73",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

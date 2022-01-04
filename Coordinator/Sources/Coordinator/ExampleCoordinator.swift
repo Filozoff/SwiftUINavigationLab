@@ -35,7 +35,7 @@ public struct ExampleCoordinator: View {
 					)
 
 				case .viewFour:
-					ViewE(viewModel: .init())
+					ViewE { _ in }
 				}
 			}
 		}

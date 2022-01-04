@@ -1,11 +1,13 @@
 import SwiftUI
+import ViewAdditions
 
 public struct ViewE: View {
 
-	@StateObject private var viewModel: ViewEViewModel
+	@StateObject private var viewModel = ViewEViewModel()
+	private let modify: ValueClosure<ViewEViewModel>
 
-	public init(viewModel: ViewEViewModel) {
-		_viewModel = StateObject(wrappedValue: viewModel)
+	public init(modify: @escaping ValueClosure<ViewEViewModel>) {
+		self.modify = modify
 	}
 
 	public var body: some View {
@@ -20,12 +22,15 @@ public struct ViewE: View {
 			Text(viewModel.input)
 			TextField("title", text: $viewModel.input)
 		}
+		.onAppear {
+			modify(viewModel)
+		}
 	}
 }
 
 struct ViewE_Previews: PreviewProvider {
 
 	static var previews: some View {
-		ViewE(viewModel: ViewEViewModel())
+		ViewD(modify: { _ in })
 	}
 }

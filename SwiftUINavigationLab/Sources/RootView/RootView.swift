@@ -7,7 +7,8 @@ struct RootView: View {
 		.defaultSwiftUINavigation,
 		.defaultSwiftUINavigationWithLazyViews,
 		.defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel,
-		.coordinator1
+		.coordinator1,
+		.flowStack
 	]
 
 	@State private var activeOption: NavigationOption?
@@ -31,6 +32,9 @@ struct RootView: View {
 
 			case .coordinator1:
 				ExampleCoordinator()
+
+			case .flowStack:
+				ExampleFlowStackCoordinator()
 
 			default:
 				EmptyView()
