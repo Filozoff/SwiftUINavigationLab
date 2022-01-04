@@ -7,6 +7,8 @@ public struct ExampleCoordinator: View {
 	@State private var stack: [Screen] = [.home]
 
 	public var body: some View {
+		let _ = Self._printChanges()
+
 		NavigationView {
 			NStack($stack) { screen, index in
 				switch screen {

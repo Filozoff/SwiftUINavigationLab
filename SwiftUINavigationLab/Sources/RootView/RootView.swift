@@ -1,3 +1,4 @@
+import Coordinator
 import SwiftUI
 
 struct RootView: View {
@@ -5,7 +6,8 @@ struct RootView: View {
 	private let options: [NavigationOption] = [
 		.defaultSwiftUINavigation,
 		.defaultSwiftUINavigationWithLazyViews,
-		.defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel
+		.defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel,
+		.coordinator1
 	]
 
 	@State private var activeOption: NavigationOption?
@@ -26,6 +28,9 @@ struct RootView: View {
 
 			case .defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel:
 				LazyViewWithNavVMA()
+
+			case .coordinator1:
+				ExampleCoordinator()
 
 			default:
 				EmptyView()
