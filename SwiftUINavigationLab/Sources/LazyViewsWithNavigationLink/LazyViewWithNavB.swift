@@ -30,6 +30,6 @@ public struct LazyViewWithNavB: View {
 
 struct LazyViewWithNavB_Previews: PreviewProvider {
 	static var previews: some View {
-		ViewWithNavB(viewModel: .init())
+		LazyViewWithNavB(viewModel: .init())
 	}
 }

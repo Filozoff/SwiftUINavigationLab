@@ -25,6 +25,6 @@ public struct LazyViewWithNavE: View {
 struct LazyViewWithNavE_Previews: PreviewProvider {
 
 	static var previews: some View {
-		ViewWithNavE(viewModel: .init())
+		LazyViewWithNavE(viewModel: .init())
 	}
 }
