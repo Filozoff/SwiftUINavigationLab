@@ -2,21 +2,21 @@ import Combine
 import Foundation
 
 public class ViewModelE: ObservableObject {
-	
-	let id = UUID()
-	let text = "End"
-	@Published var input = ""
-	@Published var counter = 0
 
-	public init() {
-		print("E: \(id) \(#function)")
-	}
+    let id = UUID()
+    let text = "End"
+    @Published var input = ""
+    @Published var counter = 0
 
-	deinit {
-		print("E: \(id) \(#function)")
-	}
+    public init() {
+        print("E: \(id) \(#function)")
+    }
 
-	func bump() {
-		counter += 1
-	}
+    deinit {
+        print("E: \(id) \(#function)")
+    }
+
+    func bump() {
+        counter += 1
+    }
 }

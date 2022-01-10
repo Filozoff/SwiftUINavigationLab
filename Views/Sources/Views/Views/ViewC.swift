@@ -3,34 +3,34 @@ import ViewAdditions
 
 public struct ViewC: View {
 
-	@StateObject private var viewModel = ViewCViewModel()
-	let onNext: Closure
-	
-	public init(onNext: @escaping Closure) {
-		self.onNext = onNext
-	}
-	
-	public var body: some View {
-		let _ = Self._printChanges()
-		
-		VStack(spacing: 20.0) {
-			Text("Counter: \(viewModel.counter)")
-			Button("Bump") {
-				viewModel.bump()
-			}
+    @StateObject private var viewModel = ViewCViewModel()
+    let onNext: Closure
 
-			Button("Go to view D") {
-				viewModel.onButtonTap()
-			}
-		}
-		.onAppear {
-			viewModel.onNext = onNext
-		}
-	}
+    public init(onNext: @escaping Closure) {
+        self.onNext = onNext
+    }
+
+    public var body: some View {
+        let _ = Self._printChanges()
+
+        VStack(spacing: 20.0) {
+            Text("Counter: \(viewModel.counter)")
+            Button("Bump") {
+                viewModel.bump()
+            }
+
+            Button("Go to view D") {
+                viewModel.onButtonTap()
+            }
+        }
+        .onAppear {
+            viewModel.onNext = onNext
+        }
+    }
 }
 
 struct ViewC_Previews: PreviewProvider {
-	static var previews: some View {
-		ViewC(onNext: { })
-	}
+    static var previews: some View {
+        ViewC(onNext: { })
+    }
 }

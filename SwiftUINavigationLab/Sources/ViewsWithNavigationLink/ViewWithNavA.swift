@@ -3,19 +3,19 @@ import ViewAdditions
 
 public struct ViewWithNavA: View {
 
-	@State private var isActive = false
+    @State private var isActive = false
 
-	public init() { }
+    public init() { }
 
-	public var body: some View {
-		let _ = Self._printChanges()
-		NavigationView {
-			VStack {
-				NavigationLink("Go to view B", isActive: $isActive) {
-					ViewWithNavB(viewModel: .init())
-				}
-			}
-		}
+    public var body: some View {
+        let _ = Self._printChanges()
+        NavigationView {
+            VStack {
+                NavigationLink("Go to view B", isActive: $isActive) {
+                    ViewWithNavB(viewModel: .init())
+                }
+            }
+        }
     }
 }
 

@@ -5,24 +5,24 @@ import PackageDescription
 
 let package = Package(
     name: "Views",
-	platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "Views",
             targets: ["Views"]
-		),
+        )
     ],
     dependencies: [
-		.package(name: "ViewAdditions", path: "../ViewAdditions")
-	],
+        .package(name: "ViewAdditions", path: "../ViewAdditions")
+    ],
     targets: [
         .target(
             name: "Views",
             dependencies: ["ViewAdditions"]
-		),
+        ),
         .testTarget(
             name: "ViewsTests",
             dependencies: ["Views"]
-		),
+        )
     ]
 )

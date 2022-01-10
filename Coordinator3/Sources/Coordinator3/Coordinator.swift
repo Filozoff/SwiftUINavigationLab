@@ -2,6 +2,6 @@ import Foundation
 
 protocol Coordinator {
 
-	associatedtype StartContext
-	associatedtype EndContext
+    associatedtype StartContext
+    associatedtype EndContext
 }

@@ -4,70 +4,69 @@ import Views
 
 public struct ExampleCoordinator: View {
 
-	@State private var stack: [Screen] = [.home]
+    @State private var stack: [Screen] = [.home]
 
-	public var body: some View {
-		let _ = Self._printChanges()
+    public var body: some View {
+        let _ = Self._printChanges()
 
-		NavigationView {
-			NStack($stack) { screen, index in
-				switch screen {
-				case .home:
-					LazyView(ViewA(modify: { $0.onNext = { push(screen: .viewOne) }}))
+        NavigationView {
+            NStack($stack) { screen, _ in
+                switch screen {
+                case .home:
+                    LazyView(ViewA(modify: { $0.onNext = { push(screen: .viewOne) }}))
 
-				case .viewOne:
-					LazyView(ViewB(modify: { $0.onNext = { push(screen: .viewTwo) }}))
+                case .viewOne:
+                    LazyView(ViewB(modify: { $0.onNext = { push(screen: .viewTwo) }}))
 
-				case .viewTwo:
-					LazyView(ViewC(onNext: { push(screen: .viewThree) }))
+                case .viewTwo:
+                    LazyView(ViewC(onNext: { push(screen: .viewThree) }))
 
-				case .viewThree:
-					LazyView(
-						ViewD {
-							$0.onNext = { event in
-								switch event {
-								case .pop: pop()
-								case .popToRoot: popToRoot()
-								case .next: push(screen: .viewFour)
-								}
-							}
-						}
-					)
+                case .viewThree:
+                    LazyView(
+                        ViewD {
+                            $0.onNext = { event in
+                                switch event {
+                                case .pop: pop()
+                                case .popToRoot: popToRoot()
+                                case .next: push(screen: .viewFour)
+                                }
+                            }
+                        }
+                    )
 
-				case .viewFour:
-					ViewE { _ in }
-				}
-			}
-		}
-	}
+                case .viewFour:
+                    ViewE { _ in }
+                }
+            }
+        }
+    }
 
-	public init() { }
+    public init() { }
 
-	func pop() {
-		stack = stack.dropLast()
-	}
+    func pop() {
+        stack = stack.dropLast()
+    }
 
-	func popToRoot() {
-		stack = Array(stack.prefix(1))
-	}
+    func popToRoot() {
+        stack = Array(stack.prefix(1))
+    }
 
-	func push(screen: Screen) {
-		stack.append(screen)
-	}
+    func push(screen: Screen) {
+        stack.append(screen)
+    }
 
-	func present(screen: Screen) {
-		stack.append(screen)
-	}
+    func present(screen: Screen) {
+        stack.append(screen)
+    }
 }
 
 extension ExampleCoordinator {
 
-	enum Screen {
-		case home
-		case viewOne
-		case viewTwo
-		case viewThree
-		case viewFour
-	}
+    enum Screen {
+        case home
+        case viewOne
+        case viewTwo
+        case viewThree
+        case viewFour
+    }
 }
-

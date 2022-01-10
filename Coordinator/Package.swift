@@ -5,25 +5,25 @@ import PackageDescription
 
 let package = Package(
     name: "Coordinator",
-	platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "Coordinator",
             targets: ["Coordinator"]
-		)
+        )
     ],
     dependencies: [
-		.package(name: "ViewAdditions", path: "../ViewAdditions"),
-		.package(name: "Views", path: "../Views")
-	],
+        .package(name: "ViewAdditions", path: "../ViewAdditions"),
+        .package(name: "Views", path: "../Views")
+    ],
     targets: [
         .target(
             name: "Coordinator",
             dependencies: ["ViewAdditions", "Views"]
-		),
+        ),
         .testTarget(
             name: "CoordinatorTests",
             dependencies: ["Coordinator"]
-		)
+        )
     ]
 )

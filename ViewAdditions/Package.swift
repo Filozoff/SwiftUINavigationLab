@@ -5,22 +5,22 @@ import PackageDescription
 
 let package = Package(
     name: "ViewAdditions",
-	platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "ViewAdditions",
             targets: ["ViewAdditions"]
-		),
+        )
     ],
     dependencies: [],
     targets: [
         .target(
             name: "ViewAdditions",
             dependencies: []
-		),
+        ),
         .testTarget(
             name: "ViewAdditionsTests",
             dependencies: ["ViewAdditions"]
-		),
+        )
     ]
 )
