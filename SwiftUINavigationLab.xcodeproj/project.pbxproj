@@ -61,7 +61,6 @@
 /* Begin PBXFileReference section */
 		2F5AAF68277F450D002C6922 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		2F5AAF69277F5AA9002C6922 /* Coordinator2 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator2; sourceTree = "<group>"; };
-		2F5AAF6A277F5B02002C6922 /* Coordinator3 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator3; sourceTree = "<group>"; };
 		2F5AAF6B277F5B15002C6922 /* Views */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Views; sourceTree = "<group>"; };
 		2F5AAF78277F6297002C6922 /* NavigationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOption.swift; sourceTree = "<group>"; };
 		2F5AAF7A277F636E002C6922 /* ViewAdditions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ViewAdditions; sourceTree = "<group>"; };
@@ -131,7 +130,6 @@
 			children = (
 				2F5AAF68277F450D002C6922 /* Coordinator */,
 				2F5AAF69277F5AA9002C6922 /* Coordinator2 */,
-				2F5AAF6A277F5B02002C6922 /* Coordinator3 */,
 				2F5AAF7A277F636E002C6922 /* ViewAdditions */,
 				2F5AAF6B277F5B15002C6922 /* Views */,
 			);
