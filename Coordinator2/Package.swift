@@ -12,11 +12,14 @@ let package = Package(
             targets: ["Coordinator2"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name: "ViewAdditions", path: "../ViewAdditions"),
+        .package(name: "Views", path: "../Views")
+    ],
     targets: [
         .target(
             name: "Coordinator2",
-            dependencies: []
+            dependencies: ["ViewAdditions", "Views"]
         ),
         .testTarget(
             name: "Coordinator2Tests",

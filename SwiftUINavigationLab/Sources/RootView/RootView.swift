@@ -1,4 +1,5 @@
 import Coordinator
+import Coordinator2
 import SwiftUI
 
 struct RootView: View {
@@ -8,6 +9,7 @@ struct RootView: View {
         .defaultSwiftUINavigationWithLazyViews,
         .defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel,
         .coordinator1,
+        .coordinator2,
         .flowStack
     ]
 
@@ -31,7 +33,10 @@ struct RootView: View {
                 LazyViewWithNavVMA()
 
             case .coordinator1:
-                ExampleCoordinator()
+                Coordinator.ExampleCoordinator()
+
+            case .coordinator2:
+                Coordinator2.ExampleCoordinator()
 
             case .flowStack:
                 ExampleFlowStackCoordinator()

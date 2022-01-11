@@ -1,49 +1,52 @@
 import SwiftUI
+import ViewAdditions
+import Views
 
 public struct ExampleCoordinator: View {
 
-    @State private var stack: [Node<Screen>] = [.root(.home)]
+    @State private var stack: [Node<Screen>] = [.push(.viewOne)]
 
     public var body: some View {
         NavigationView {
             NStack($stack) { screen, _ in
                 switch screen {
-                case .home:
-                    ViewFactory.make(
-                        number: 0,
-                        action: { push(screen: .viewOne) }
-                    )
-
                 case .viewOne:
-                    ViewFactory.make(
-                        number: 1,
-                        action: { push(screen: .viewTwo) },
-                        popAction: { pop() },
-                        popToRootAction: { popToRoot() }
-                    )
+                    ViewA {
+                        $0.onNext = {
+                            push(screen: .viewTwo)
+                        }
+                    }
 
                 case .viewTwo:
-                    ViewFactory.make(
-                        number: 2,
-                        action: { push(screen: .viewThree) },
-                        popAction: { pop() },
-                        popToRootAction: { popToRoot() }
-                    )
+                    ViewB {
+                        $0.onNext = {
+                            push(screen: .viewThree)
+                        }
+                    }
 
                 case .viewThree:
-                    ViewFactory.make(
-                        number: 3,
-                        action: { push(screen: .viewFour) },
-                        popAction: { pop() },
-                        popToRootAction: { popToRoot() }
-                    )
+                    ViewC {
+                        push(screen: .viewFour)
+                    }
 
                 case .viewFour:
-                    ViewFactory.make(
-                        number: 4,
-                        popAction: { pop() },
-                        popToRootAction: { popToRoot() }
-                    )
+                    ViewD {
+                        $0.onNext = { event in
+                            switch event {
+                            case .next:
+                                push(screen: .viewFive)
+
+                            case .pop:
+                                pop()
+
+                            case .popToRoot:
+                                popToRoot()
+                            }
+                        }
+                    }
+
+                case .viewFive:
+                    ViewE { _ in }
                 }
             }
         }
@@ -71,10 +74,10 @@ public struct ExampleCoordinator: View {
 extension ExampleCoordinator {
 
     enum Screen {
-        case home
         case viewOne
         case viewTwo
         case viewThree
         case viewFour
+        case viewFive
     }
 }

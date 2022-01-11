@@ -19,5 +19,6 @@ extension RootView.NavigationOption {
     static let defaultSwiftUINavigationWithLazyViews = Self(name: "Default SwiftUI navigation with Lazy Views")
     static let defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel = Self(name: "Default SwiftUI navigation with Lazy Views and not injected ViewModel")
     static let coordinator1 = Self(name: "Coordinator 1")
+    static let coordinator2 = Self(name: "Coordinator 2")
     static let flowStack = Self(name: "Flow Stack")
 }
