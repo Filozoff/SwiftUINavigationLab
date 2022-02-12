@@ -8,7 +8,8 @@ public class ViewDViewModel: ObservableObject {
     let id = UUID()
     @Published var counter = 0
 
-    public init() {
+    public init(onNext: ValueClosure<Event>? = nil) {
+        self.onNext = onNext
         print("D: \(id) \(#function)")
     }
 

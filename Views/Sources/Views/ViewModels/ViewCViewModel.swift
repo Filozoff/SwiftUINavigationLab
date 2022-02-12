@@ -8,7 +8,8 @@ public class ViewCViewModel: ObservableObject {
     let id = UUID()
     @Published var counter = 0
 
-    public init() {
+    public init(onNext: Closure? = nil) {
+        self.onNext = onNext
         print("C: \(id) \(#function)")
     }
 

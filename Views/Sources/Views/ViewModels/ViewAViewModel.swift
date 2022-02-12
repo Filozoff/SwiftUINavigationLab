@@ -12,7 +12,8 @@ public class ViewAViewModel: ObservableObject {
 
     private var cancellables = Set<AnyCancellable>()
 
-    public init() {
+    public init(onNext: Closure? = nil) {
+        self.onNext = onNext
         print("A: \(id) \(#function)")
     }
 
