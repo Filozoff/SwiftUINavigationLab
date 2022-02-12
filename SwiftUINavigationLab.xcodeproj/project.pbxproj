@@ -125,6 +125,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F3AD6AD27B7F7C3007CFA84 /* NativeSwiftUINavigation */ = {
+			isa = PBXGroup;
+			children = (
+				2FF0FC3E27B82A18003C013C /* Regular */,
+				2FF0FC3D27B829F6003C013C /* Lazy */,
+			);
+			path = NativeSwiftUINavigation;
+			sourceTree = "<group>";
+		};
+		2F3AD6AE27B7F7DC007CFA84 /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				2F3AD6AD27B7F7C3007CFA84 /* NativeSwiftUINavigation */,
+				2FC629532784F84A00B1E732 /* FlowStack */,
+			);
+			path = Navigations;
+			sourceTree = "<group>";
+		};
 		2F5AAF67277F450D002C6922 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,18 +168,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2F5AAF93277F66C3002C6922 /* ViewsWithNavigationLink */ = {
-			isa = PBXGroup;
-			children = (
-				2F5AAF97277F66C3002C6922 /* ViewWithNavA.swift */,
-				2F5AAF95277F66C3002C6922 /* ViewWithNavB.swift */,
-				2F5AAF98277F66C3002C6922 /* ViewWithNavC.swift */,
-				2F5AAF94277F66C3002C6922 /* ViewWithNavD.swift */,
-				2F5AAF96277F66C3002C6922 /* ViewWithNavE.swift */,
-			);
-			path = ViewsWithNavigationLink;
 			sourceTree = "<group>";
 		};
 		2F871C0C277F3A82002CB6F0 = {
@@ -224,13 +230,10 @@
 		2F871C42277F3AF9002CB6F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2FC629392784D36200B1E732 /* ViewModel */,
+				2F3AD6AE27B7F7DC007CFA84 /* Navigations */,
 				2F871C44277F3B18002CB6F0 /* Main */,
 				2F5AAF77277F627B002C6922 /* RootView */,
-				2FC629532784F84A00B1E732 /* FlowStack */,
-				2FED34CF27823C5E0020F8F7 /* LazyViewsWithNavigationLink */,
-				2FC629422784DACA00B1E732 /* LazyViewsWithNavigationLinkAndNotInjectedViewModel */,
-				2F5AAF93277F66C3002C6922 /* ViewsWithNavigationLink */,
+				2FC629392784D36200B1E732 /* ViewModel */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2FC629422784DACA00B1E732 /* LazyViewsWithNavigationLinkAndNotInjectedViewModel */ = {
+		2FC629422784DACA00B1E732 /* WithModificationClosure */ = {
 			isa = PBXGroup;
 			children = (
 				2FC629452784DD2F00B1E732 /* LazyViewWithNavVMA.swift */,
@@ -271,18 +274,18 @@
 				2FC629462784DD2F00B1E732 /* LazyViewWithNavVMD.swift */,
 				2FC629442784DD2F00B1E732 /* LazyViewWithNavVME.swift */,
 			);
-			path = LazyViewsWithNavigationLinkAndNotInjectedViewModel;
+			path = WithModificationClosure;
 			sourceTree = "<group>";
 		};
 		2FC629532784F84A00B1E732 /* FlowStack */ = {
 			isa = PBXGroup;
 			children = (
-				2FC629542784F87100B1E732 /* ExampleFlowStackCoordinator.swift */,
+				2FF0FC3F27B82A82003C013C /* WithModificationClosure */,
 			);
 			path = FlowStack;
 			sourceTree = "<group>";
 		};
-		2FED34CF27823C5E0020F8F7 /* LazyViewsWithNavigationLink */ = {
+		2FED34CF27823C5E0020F8F7 /* Regular */ = {
 			isa = PBXGroup;
 			children = (
 				2FED34D327823C5E0020F8F7 /* LazyViewWithNavA.swift */,
@@ -291,7 +294,36 @@
 				2FED34D027823C5E0020F8F7 /* LazyViewWithNavD.swift */,
 				2FED34D227823C5E0020F8F7 /* LazyViewWithNavE.swift */,
 			);
-			path = LazyViewsWithNavigationLink;
+			path = Regular;
+			sourceTree = "<group>";
+		};
+		2FF0FC3D27B829F6003C013C /* Lazy */ = {
+			isa = PBXGroup;
+			children = (
+				2FED34CF27823C5E0020F8F7 /* Regular */,
+				2FC629422784DACA00B1E732 /* WithModificationClosure */,
+			);
+			path = Lazy;
+			sourceTree = "<group>";
+		};
+		2FF0FC3E27B82A18003C013C /* Regular */ = {
+			isa = PBXGroup;
+			children = (
+				2F5AAF97277F66C3002C6922 /* ViewWithNavA.swift */,
+				2F5AAF95277F66C3002C6922 /* ViewWithNavB.swift */,
+				2F5AAF98277F66C3002C6922 /* ViewWithNavC.swift */,
+				2F5AAF94277F66C3002C6922 /* ViewWithNavD.swift */,
+				2F5AAF96277F66C3002C6922 /* ViewWithNavE.swift */,
+			);
+			path = Regular;
+			sourceTree = "<group>";
+		};
+		2FF0FC3F27B82A82003C013C /* WithModificationClosure */ = {
+			isa = PBXGroup;
+			children = (
+				2FC629542784F87100B1E732 /* ExampleFlowStackCoordinator.swift */,
+			);
+			path = WithModificationClosure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
