@@ -11,26 +11,26 @@ public struct ExampleCoordinator: View {
             NStack($stack) { screen, _ in
                 switch screen {
                 case .viewOne:
-                    ViewA {
+                    ModifyClosuresViews.ViewA {
                         $0.onNext = {
                             push(screen: .viewTwo)
                         }
                     }
 
                 case .viewTwo:
-                    ViewB {
+                    ModifyClosuresViews.ViewB {
                         $0.onNext = {
                             push(screen: .viewThree)
                         }
                     }
 
                 case .viewThree:
-                    ViewC {
+                    ModifyClosuresViews.ViewC {
                         push(screen: .viewFour)
                     }
 
                 case .viewFour:
-                    ViewD {
+                    ModifyClosuresViews.ViewD {
                         $0.onNext = { event in
                             switch event {
                             case .next:
@@ -46,7 +46,7 @@ public struct ExampleCoordinator: View {
                     }
 
                 case .viewFive:
-                    ViewE { _ in }
+                    ModifyClosuresViews.ViewE { _ in }
                 }
             }
         }

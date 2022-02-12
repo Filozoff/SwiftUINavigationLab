@@ -13,17 +13,17 @@ public struct ExampleCoordinator: View {
             NStack($stack) { screen, _ in
                 switch screen {
                 case .home:
-                    LazyView(ViewA(modify: { $0.onNext = { push(screen: .viewOne) }}))
+                    LazyView(ModifyClosuresViews.ViewA(modify: { $0.onNext = { push(screen: .viewOne) }}))
 
                 case .viewOne:
-                    LazyView(ViewB(modify: { $0.onNext = { push(screen: .viewTwo) }}))
+                    LazyView(ModifyClosuresViews.ViewB(modify: { $0.onNext = { push(screen: .viewTwo) }}))
 
                 case .viewTwo:
-                    LazyView(ViewC(onNext: { push(screen: .viewThree) }))
+                    LazyView(ModifyClosuresViews.ViewC(onNext: { push(screen: .viewThree) }))
 
                 case .viewThree:
                     LazyView(
-                        ViewD {
+                        ModifyClosuresViews.ViewD {
                             $0.onNext = { event in
                                 switch event {
                                 case .pop: pop()
@@ -35,7 +35,7 @@ public struct ExampleCoordinator: View {
                     )
 
                 case .viewFour:
-                    ViewE { _ in }
+                    ModifyClosuresViews.ViewE { _ in }
                 }
             }
         }
