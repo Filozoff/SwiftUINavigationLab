@@ -24,13 +24,13 @@ struct RootView: View {
         .sheet(item: $activeOption) { option in
             switch option {
             case .defaultSwiftUINavigation:
-                ViewWithNavA()
+                Native.ViewA()
 
             case .defaultSwiftUINavigationWithLazyViews:
-                LazyViewWithNavA()
+                NativeLazy.ViewA()
 
             case .defaultSwiftUINavigationWithLazyViewsAndNotInjectedViewModel:
-                LazyViewWithNavVMA()
+                NativeLazyNoInjection.ViewA()
 
             case .coordinator1:
                 Coordinator.ExampleCoordinator()
